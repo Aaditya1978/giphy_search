@@ -7,6 +7,10 @@ A Next.js application to display gifs from Giphy Api based on search of user.
 
 Next.js, React, HTML, SCSS, Bootstrap
 
+## Deployed Link
+
+Deployed on Vercel - https://giphy-search-eight.vercel.app/
+
 ## Run Locally
 
 Go to the project directory

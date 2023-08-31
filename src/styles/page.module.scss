@@ -1,0 +1,169 @@
+.main{
+    background: var(--page-background, #E8EAEE);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .alert{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 10px;
+
+        .alertHeading{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        p{
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+    }
+
+    .card{
+        padding: 20px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        position: relative;
+
+        .favorite{
+            position: absolute;
+            top: 18px;
+            right: 20px;
+
+            .button{
+                width: 140px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                height: 50px;
+                border: none;
+                outline: none;
+                background: #000;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .buttonActive{
+                width: 140px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                height: 50px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background: #fff;
+                color: #000;
+                border: 1px solid #000;
+            }
+        }
+
+        .search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .searchInput{
+                width: 450px;
+                height: 50px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background: var(--input-field-background, #F2F4F8);
+                font-size: 16px;
+                outline: none;
+            }
+
+            .button{
+                width: 140px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                height: 50px;
+                border: none;
+                outline: none;
+                background: #000;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    background: #fff;
+                    color: #000;
+                    border: 1px solid #000;
+                }
+            }
+        }
+
+        .loader{
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .gifContainer{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .gif{
+                border-radius: 10px;
+                cursor: pointer;
+
+                img{
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                h3{
+                    font-size: 1rem;
+                    margin-top: 10px;
+                    text-align: start;
+                }
+
+                .gifActions{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    p{
+                        font-size: 0.8rem;
+                        text-align: start;
+                    }
+
+                    .star{
+                        font-size: 2rem;
+                        cursor: pointer;
+                    }
+
+                    .starFill{
+                        font-size: 2rem;
+                        cursor: pointer;
+                        color: #FFC107;
+                    }
+                }
+            }
+        }
+
+        .pagination{
+            margin-top: 40px;
+        }
+    }
+}

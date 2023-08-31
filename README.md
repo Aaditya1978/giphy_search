@@ -1,34 +1,115 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Giphy Search APP
 
-First, run the development server:
+A Next.js application to display gifs from Giphy Api based on search of user.
+
+## Tech Stack
+
+Next.js, React, HTML, SCSS, Bootstrap
+
+## Run Locally
+
+Go to the project directory
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  cd giphy_search
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+  npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the server
 
-## Learn More
+```bash
+  npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+#### Server will be running on http://localhost:3000/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+you will need to add the following environment variables to your .env.local file
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`API_URL = "http://localhost:3000"`
+
+`GIPHY_API_KEY = ""`
+
+`FIREBASE_API_KEY = ""`
+
+`FIREBASE_AUTH_DOMAIN = ""`
+
+`FIREBASE_PROJECT_ID = ""`
+
+`FIREBASE_STORAGE_BUCKET = ""`
+
+`FIREBASE_MESSAGING_SENDER_ID = ""`
+
+`FIREBASE_APP_ID = ""`
+
+`JWT_SECRET = "your_secret"`
+
+## Features
+
+- Firebase Authentication to access Search Page
+- Click on GIF to copy URL
+- Mark GIF as favourite
+- Favourite section to see marked GIF's
+- Loading animations and alerts
+- Seure API
+- clean Code
+
+
+# API Reference
+
+## Signup API
+
+```http
+  POST /api/signup
+```
+
+| Body      | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `name`    | `string` | **Required**. Name         |
+| `email`   | `string` | **Required**. Email        |
+| `password`| `string` | **Required**. Password     |
+
+## Login API
+
+```http
+  POST /api/login
+```
+
+| Body      | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `email`   | `string` | **Required**. Email        |
+| `password`| `string` | **Required**. Password     |
+
+
+## Giphy Search API
+
+```http
+  GET /api/giphySearch
+```
+
+Returns the gif data for searched query
+
+| Parameter    | Type     | Description                   |
+| :--------    | :------- | :-------------------------    |
+| `searchTerm` | `string` | **Required**. Search string   |
+
+
+## Verify User API
+
+```http
+  GET /api/verify
+```
+
+| Headers         | Type     | Description                       |
+| :--------       | :------- | :-------------------------        |
+| `authorization` | `string` | **Required**. jwt token           |
+
